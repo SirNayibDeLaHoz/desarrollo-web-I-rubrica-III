@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const allOption = document.createElement('option');
             allOption.value = 'all';
             allOption.textContent = 'Todos los productos';
+            allOption.selected = true;
             productFilter.prepend(allOption);
         } catch (error) {
             console.error('Error fetching data:', error);
