@@ -1,34 +1,3 @@
-/*document.addEventListener('DOMContentLoaded', async () => {
-    const productContainer = document.getElementById('product-container');
-
-    try {
-        // Consumir API
-        const response = await fetch('https://fakestoreapi.com/products');
-        const products = await response.json();
-
-        // Mostrar las 15 primeras cards
-        products.slice(0, 15).forEach(product => {
-            // Crear la card
-            const card = document.createElement('div');
-            card.classList.add('col-12', 'col-md-4', 'd-flex', 'justify-content-center');
-
-            card.innerHTML = `
-            <div class="card product-card shadow mb-4" style="width: 18rem;">
-                <img src="${product.image}" class="img-fluid" alt="${product.title}" style="max-height: 100%;>
-                <div class="card-body">
-                    <h5 class="card-title">${product.title}</h5>
-                    <p class="card-text">${product.price}</p>
-                </div>
-            </div>
-        `;
-
-            productContainer.appendChild(card);
-        });
-    } catch (error) {
-        console.error('Error fetching products:', error);
-        productContainer.innerHTML = '<p>Error al cargar los productos</p>';
-    }
-});*/
 document.addEventListener("DOMContentLoaded", () => {
     const fetchData = async () => {
         // Mostrar el GIF de espera
