@@ -1,0 +1,63 @@
+/* Personalización del scrollbar en navegadores basados en Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Ancho del scroll */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color del fondo de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #212529;
+    /* Color del thumb (la parte que se arrastra) */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    border: 3px solid #f1f1f1;
+    /* Espacio alrededor del thumb */
+}
+
+/* Personalización para Firefox */
+* {
+    scrollbar-width: thin;
+    /* Ancho del scroll en Firefox */
+    scrollbar-color: #212529 #f1f1f1;
+    /* Color del thumb y del fondo */
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    z-index: 9999;
+    display: none;
+}
+
+/* Cards estilo */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.05);
+    /* Aplicamos el zoom inicial */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    /* Espacio entre las cards */
+}
+
+.product-card:hover {
+    transform: scale(1.1);
+    /* Efecto de zoom al hacer hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra más intensa al hacer hover */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
